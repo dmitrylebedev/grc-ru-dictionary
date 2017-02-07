@@ -1,0 +1,46 @@
+# Logs
+*.log
+
+# Node build artifacts
+node_modules
+npm-debug.log
+build
+
+# Local development
+*.env
+*.dev
+.DS_Store
+
+# Folders to ignore
+.CVS
+.git
+.hg
+.idea
+.svn
+
+# Compiled styles, img, fonts
+/src/resources/
+
+database/*
+!database/.gitkeep
+/.publish/
+/static/styles/sprites/
+# Logs
+*.log
+
+# Node build artifacts
+node_modules
+npm-debug.log
+build
+
+# Local development
+*.env
+*.dev
+.DS_Store
+
+# Folders to ignore
+.CVS
+.git
+.hg
+.idea
+.svn
