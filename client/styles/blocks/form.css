@@ -1,0 +1,29 @@
+.form {
+  display: block;
+}
+
+  .form_type_edit_word {
+    text-align: left;
+  }
+  
+  .form_type_search {
+    text-align: center;
+  }
+
+  .form_type_edit_word label{
+    display: block;
+  }
+
+.form__group {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.form__group label {
+  margin-right: 8px;
+}
+
+.form__group input {
+  font-size: 20px;
+  font-weight: 400;
+}

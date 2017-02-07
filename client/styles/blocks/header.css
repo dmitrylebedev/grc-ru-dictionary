@@ -1,0 +1,18 @@
+.header {
+  padding: 8px 8px;
+  width: 320px;
+  height: 46px;
+  float: left;
+
+  background: #eee;
+  border-bottom: 1px solid #d7d7d7;
+  border-right: 1px solid #d7d7d7;
+}
+
+@media (--mobile) {
+  .header {
+    float: none;
+    width: 100%;
+    border-right: 0;
+  }
+}

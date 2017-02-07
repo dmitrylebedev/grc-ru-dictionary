@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  /* 
+   see:
+   https://github.com/MoOx/postcss-cssnext#check-out-cssnext-website 
+   http://cssnext.io/features/#system-ui-font-family
+  */
+  font-family: var(--primary-font);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--main-color);
+  background-color: var(--main-background-color);
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  margin-left: 320px;
+  padding-left: 24px;
+  padding-top: 8px;
+}
+
+@media (--mobile) {
+  .container {
+    margin-left: 0;
+    padding: 8px;
+  }
+}

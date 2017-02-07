@@ -1,0 +1,15 @@
+.translate-area {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.translate-area p {
+  margin: 0;
+}
+
+.translate-area h1 {
+  font-size: 40px;
+  line-height: 1;
+  margin: 0 0 24px 0;
+}

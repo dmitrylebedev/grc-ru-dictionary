@@ -1,0 +1,21 @@
+@import "styles/vendor/normalize.css";
+
+@import "styles/global/variables.css";
+@import "styles/global/layout.css";
+
+@import "styles/blocks/app.css";
+
+@import "styles/blocks/error-section.css";
+@import "styles/blocks/form.css";
+@import "styles/blocks/header.css";
+
+@import "styles/blocks/container.css";
+@import "styles/blocks/content.css";
+
+@import "styles/blocks/sidebar.css";
+
+@import "styles/blocks/footer.css";
+@import "styles/blocks/translate-area.css";
+@import "styles/blocks/input-txt.css";
+
+@import "styles/blocks/nav.css";

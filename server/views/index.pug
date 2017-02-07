@@ -1,0 +1,91 @@
+extends layout
+
+include mixins/_searchForm
+
+block content
+  header.header
+    +searchForm()
+    
+  section.sidebar
+  
+    nav.nav
+      ul
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+        li
+          p α
+  
+  .container
+    
+    main.content
+
+      .translate-area#js-results
+    
+        if word && word.translate
+          p= `${word.translate}`
+
+          
+    footer.footer
+      p © 2017 grc-ru-dictionary.com
+      p Нашли ошибку? 
+        a(href='https://github.com/dmitrylebedev/grc-ru-dictionary/issues' target='_blank') Напишите об этом!
+      p powered by 
+        a(href='http://nodejs.org' target='_blank') node.js 
+        | & 
+        a(href='https://github.com/dmitrylebedev/grc-ru-dictionary' target='_blank') open source

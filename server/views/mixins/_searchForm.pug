@@ -1,0 +1,11 @@
+mixin searchForm()
+  form.form.form_type_search
+    label.input-txt#js-input-text
+      span.input-txt__inner
+
+        if word && word.name
+          input.input-txt__field(placeholder='Поиск в словаре', type='text' value=`${word.name}`)
+        else
+          input.input-txt__field(placeholder='Поиск в словаре', type='text')
+
+        span.input-txt__clear
