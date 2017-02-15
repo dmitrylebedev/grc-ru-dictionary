@@ -13,6 +13,14 @@ export const WORDS = [
   },
   {
     id: 4,
-    name: 'Миша',
+    name: 'λογοσ',
+  },
+  {
+    id: 5,
+    name: 'αγαπη'
+  },
+  {
+    id: 6,
+    name: 'λοι'
   }
 ];

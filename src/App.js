@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
 import './App.css';
 import {
-  Word,
+  Word
 } from './components';
+
+import {
+  convertCharToggle
+} from './helpers'
 
 import {WORDS} from './data/vocabilary'
 
@@ -14,8 +18,11 @@ class App extends Component {
     this.state = {
       displayedWords: WORDS
     };
-
-    this.handleSearch = this.handleSearch.bind(this);
+    
+    this.onKeyPress = this.onKeyPress.bind(this);
+    this.onChange = this.onChange.bind(this);
+    this.filter = this.filter.bind(this)
+    
   }
 
   render() {
@@ -23,7 +30,12 @@ class App extends Component {
       <div className="App">
         <fieldset>
           <label>Поиск</label>
-          <input type="text" className="search-field" onChange={this.handleSearch} />
+          <input 
+            type="text" 
+            className="search-field"
+            onKeyPress={this.onKeyPress}
+            onChange={this.onChange}
+          />
         </fieldset>
         <ul className="contacts-list">
           {
@@ -38,8 +50,24 @@ class App extends Component {
       </div>
     );
   }
-
-  handleSearch(event) {
+  
+  onChange(event){
+  
+    this.filter(event);
+    
+    if (event.target.value === ''){
+      this.setState({
+        displayedWords: WORDS
+      });
+    }
+  }
+  
+  onKeyPress(event) {
+    convertCharToggle(event.currentTarget, event);
+    this.filter(event)
+  }
+  
+  filter(event){
     let searchQuery = event.target.value.toLowerCase();
     let displayedWords = WORDS.filter(function(el) {
       let searchValue = el.name.toLowerCase();
