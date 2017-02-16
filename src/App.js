@@ -63,7 +63,7 @@ class App extends Component {
   }
   
   onKeyPress(event) {
-    convertCharToggle(event.currentTarget, event);
+    convertCharToggle(event);
     this.filter(event)
   }
   
