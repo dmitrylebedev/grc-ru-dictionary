@@ -13,7 +13,7 @@ const app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(express.static(path.resolve(__dirname, 'build')));
+app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(bodyParser.json());
 
 //app.use('/api', ApiRouter);
@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 // SPA only
 // TODO add server side render
 app.use('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
 // Start application

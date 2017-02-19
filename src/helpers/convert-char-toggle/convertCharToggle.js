@@ -3,7 +3,9 @@
  * 
  * @param event
  */
+
 export const convertCharToggle = (event) => {
+  
   let key = event.which;
   let control = event.currentTarget;
   

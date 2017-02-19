@@ -1,12 +1,17 @@
+// @see https://webpack.js.org/guides/
 const webpack = require('webpack');
+const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const postCssConfigPath = path.join('postcss.config.js');
+const extractCSS = new ExtractTextPlugin({ filename: 'css/style.min.css', disable: false, allChunks: true });
 
 module.exports = {
-  entry: "./src1/index.js",
+  entry: "./src/index.js",
   output: {
-    path: __dirname + '/build/js',
-    publicPath: "build/js",
-    filename: "bundle.js"
+    path: __dirname + '/public/build',
+    publicPath: "public/build",
+    filename: "js/bundle.min.js"
   },
   module: {
     rules: [
@@ -21,10 +26,26 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.css$/,
+        use: extractCSS.extract({
+          fallback: 'style-loader',
+          use: [
+            { loader: 'css-loader' },
+            { 
+              loader: 'postcss-loader',
+              query: {
+                config: postCssConfigPath
+              }
+            },
+          ]
+        })
       }
     ]
   },
   plugins: [
-    new UglifyJSPlugin()
+    new UglifyJSPlugin(),
+    extractCSS
   ]
 };
