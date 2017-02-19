@@ -1,11 +1,20 @@
-# Logs
-*.log
-
 # Node build artifacts
 node_modules
 npm-debug.log
-build
+
+# Local development
+*.env
+*.dev
+.DS_Store
+
+# Docker
+Dockerfile
+docker-compose.yml
 
 # Folders to ignore
-.idea/*
-
+.CVS
+.git
+.hg
+.idea
+.svn
+bower_components
