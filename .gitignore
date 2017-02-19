@@ -7,14 +7,10 @@ npm-debug.log
 *.dev
 .DS_Store
 
-# Docker
-Dockerfile
-docker-compose.yml
-
 # Folders to ignore
 .CVS
 .git
 .hg
 .idea
 .svn
-bower_components
+public/build
