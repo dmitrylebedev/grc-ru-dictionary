@@ -7,13 +7,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // this is javascript rule
 const javascript = {
   test: /\.(js)$/,
-  exclude: /node_modules/,
-  use: [{
-    loader: "babel-loader",
-    query: {
-      presets: ['es2015']
-    }
-  }]
+  exclude: /node_modules/
 };
 
 // this is styles rule
@@ -21,17 +15,14 @@ const styles = {
   test: /\.css$/,
   use: ExtractTextPlugin.extract({
     fallback: 'style-loader',
-    use: [
-      { loader: 'css-loader', options: { 
-        importLoaders: 1,
-        sourceMap: true,
-        config: {
-          path: './postcss.config.js'
+    use: [{ 
+      loader: 'css-loader', 
+        options: { 
+          importLoaders: 1,
+          sourceMap: false,
+          minimize: true
         }
-      } 
-      },
-      'postcss-loader'
-    ]
+    }]
   })
 };
 

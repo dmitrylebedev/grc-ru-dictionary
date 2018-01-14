@@ -30,8 +30,6 @@ app.use((req, res, next) => {
   next();
 });
 
-console.log('process', process.env.NODE_ENV) /*eslint-enable-line */
-
 // after all that above middleware, handle routes
 app.use('/', routes);
 

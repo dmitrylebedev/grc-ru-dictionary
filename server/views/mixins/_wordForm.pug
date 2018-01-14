@@ -1,11 +1,11 @@
 mixin wordForm()
-  form(action="/add" method="POST" class="card").form.form_type_edit_word
+  form(action="/add" method="POST" class="card").form
     .form__group
       label(for="name").input-txt#js-input-text
         span.input-txt__inner
           input.input-txt__field(placeholder='Поиск в словаре', type='text', name="name")
           span.input-txt__clear
     .form__group
-      label(for="translate") Перевод
+      label(for="translate")
       textarea(name="translate")
     button(class="button") Сохранить →
