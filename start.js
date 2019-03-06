@@ -3,7 +3,6 @@ const chalk = require('chalk');
 
 // import environmental variables from variables.env file
 require('dotenv').config({ path: 'variables.env' });
-
 // connect to database and handle an bad connections
 mongoose.connect(process.env.DATABASE);
 mongoose.Promise = global.Promise;
